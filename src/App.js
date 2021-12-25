@@ -2,6 +2,7 @@ import React from "react";
 import About from "./components/About";
 /* import Contact from "./components/Contact"; */
 import Navigation from "./components/Navbar";
+import Skills from "./components/Skills"; 
 /* import Projects from "./components/Projects"; */
 import './App.css';
 
@@ -12,6 +13,7 @@ export default function App() {
     <main className="main">
       <Navigation />
       <About />
+      <Skills />
     </main>
   );
 }
