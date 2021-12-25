@@ -1,17 +1,12 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCode)
-
-export default function About() {
+export default function Skills() {
   return (
-    <section className="aboutBox">
+    <section>
       <div className="container">
         <div className="intro">
           <FontAwesomeIcon icon={faCode} color="#C2EB37"/>
-          <h1>  Hi, I'm Melissa</h1>
+          <h1>Skills & Languages</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
           laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
           Laborum, voluptas natus?</p>

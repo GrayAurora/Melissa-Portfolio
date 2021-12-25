@@ -1,18 +1,18 @@
 import React from "react";
-/* import About from "./components/About";
-import Contact from "./components/Contact"; */
+import About from "./components/About";
+/* import Contact from "./components/Contact"; */
 import Navigation from "./components/Navbar";
 /* import Projects from "./components/Projects"; */
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import './App.css';
 
-library.add(faCode)
+/*reference storyset = <a href="https://storyset.com/web">Web illustrations by Storyset</a> */
 
 export default function App() {
   return (
-    <main style={{backgroundColor: '#343a40', color: '#ced4da'}}>
+    <main className="main">
       <Navigation />
-
+      <About />
     </main>
   );
 }
+
