@@ -37,26 +37,30 @@
   }
 }
 
+
+
 .main {
-  background-color: #001D3D;
+  background: #25292D;
   color: #ced4da;
   min-height: 100vh;
+  font-family: 'Playfair Display', serif;
 }
 
 .navbar {
-  height: 50px;
-  background-color: #001429;
+  height: 3rem;
+  background-color: #2E3338;
   width: 100%;
   display: flex;
-  top: 0;
   padding: .7rem 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:stretch;
   align-content: space-between;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+  position: sticky;
+  top: 0;
 }
 
 .nav-link {
@@ -65,7 +69,11 @@
   margin: 5px;
   display: flex;
   font-size: large;
-  
+}
+
+.nav-link:hover {
+  transform: scale(1.5);
+  color: #D5B038;
 }
 
 .navbar-collapse {
@@ -84,23 +92,17 @@
 
 .navbar-brand {
   display: flex;
-  justify-content: center;
-  margin-top: 5px;
-  margin-left: 5px;
-  padding-right: 15px;
-  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-right: gray solid 1px;
-  font-size: x-large;
-  color: #C2EB37;
+  font-size: 2.5rem;
+  color: #caa734;
   text-decoration: none;
   max-width: max-content;
-  height: 90%;
+  font-family: 'Qwitcher Grypen', cursive;
 }
 
-.aboutBox {
-  display: block;
-  position: static;
-}
+
 
 .container {
   display: flex;
@@ -109,9 +111,9 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
   max-height: 400px;
-  background-color: #001D3D;
-
+  width: 90vw;
 }
 
 .intro {
@@ -124,22 +126,24 @@
 
 .codingsvg {
   width: 50%;
-  display: block;
-  max-width: 32rem;
+  display: flex;
+  max-height: 90%;
 }
 
-.intro > h1 {
-  font-size: 2.5rem;
-  display: inline;
+.mssgsvg {
+  width: 50%;
+  display: flex;
+  height: 40rem
 }
 
 .fa-code {
   font-size: 2rem;
+  color: #CD9900;
 }
 
 .intro > p {
   display: block;
-
+  font-size: large;
 }
 
 .btnGrp {
@@ -152,24 +156,25 @@
 .btn {
   background-color: #343a40;
   display: inline-block;
-  color: #ced4da;
+  color: #CD9900;
   text-decoration: none;
   border-width: 2px;
   border-style: solid;
-  border-color: #25292D ;
+  border-color: #CD9900 ;
   border-radius: 8px;
-  width: 25%;
+  width: 30%;
   text-align: center;
   padding: .5rem 1.5rem;
   font-weight: 500;
+  font-size: large;
+
 }
 
 .btn:hover {
-  background-color: #ffd60a;
-  border-color: #ffc300;
-  color: #343a40;
+  background-image: linear-gradient(to right, #B88746, #FDF5A6);
+  border-color:  #B88746;
+  color: #1C1F21;
   font-weight: 600;
-
 }
 
 .techContainer {
@@ -177,8 +182,11 @@
   flex-direction: column;
   align-items: center;
   padding: 5rem 2.5rem;
-  background-color: #001D3D;
-
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  flex-grow: 1;
+  width: 90vw;
 }
 
 .techIcons {
@@ -188,8 +196,85 @@
 }
 
 .singleIcons {
-  display: flex;
   height: 60px;
   width: 60px;
   margin: 2rem 2rem 1rem;
+}
+
+.form-control {
+  background-color: #343a40;
+  padding: .5rem;
+  border: #495057 solid 2px;
+  border-radius: 8px;
+  color: #ADB5BD;
+}
+
+form {
+  padding: 2rem;
+  border: #495057 solid 2px;
+  border-radius: 8px;
+  background-color: #495057;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+  width: 90vw;
+  height: max-content;
+}
+
+
+.project {
+  height: 100%;
+  width: 100%;
+}
+
+.projectIcon {
+  height: 20rem;
+  margin-top: 2.5rem;
+}
+
+.projectIcon:hover {
+  transform: scale(1.2);
+
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.intro > h1 {
+  font-size: 2.5rem;
+  display: inline;
+}
+
+.projectIcon > h3 {
+  font-family: 'Qwitcher Grypen', cursive;
+  font-size: 1.8rem;
+}
+
+.form-label {
+  font-size: large;
+  color: #D5B038;
+}
+
+.formMssg {
+  width: 75%;
+}
+
+.formGroup > .form-control {
+  font-family: 'Playfair Display', serif;
+}
+
+.formGroup > .form-text {
+  opacity: .75;
 }

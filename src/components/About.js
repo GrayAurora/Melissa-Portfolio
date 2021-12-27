@@ -8,14 +8,12 @@ library.add(faCode)
 
 export default function About() {
   return (
-    <section className="aboutBox">
+    <section id="about" className="aboutBox">
       <div className="container">
         <div className="intro">
-          <FontAwesomeIcon icon={faCode} color="#C2EB37"/>
+          <FontAwesomeIcon icon={faCode}/>
           <h1>  Hi, I'm Melissa</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-          laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-          Laborum, voluptas natus?</p>
+          <p>I am a Front-End Developer for Web and Mobile Applications.</p>
           <div className="btnGrp">
             <Button href="#contact"> Let's talk </Button>
             <Button href="#projects"> My projects </Button>
@@ -23,7 +21,7 @@ export default function About() {
         </div>
           <img 
           className="codingsvg"
-          src="./Devices-bro.svg"
+          src="./code-review-animate.svg"
           alt="react logo" />
         </div>
     </section>

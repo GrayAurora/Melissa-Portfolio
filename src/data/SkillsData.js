@@ -39,7 +39,11 @@ export const skills = [
     image: "./github-svgrepo-com.svg",
     alternate: "GitHub logo"
   },
-
+  {
+    title: "Bootstrap",
+    image: "./bootstrap-svgrepo-com.svg",
+    alternate: "Bootstrap logo"
+  },
 
 
 
