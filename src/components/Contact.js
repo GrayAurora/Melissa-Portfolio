@@ -5,7 +5,7 @@ import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } f
 export default function Contact() {
   return (
     <section id="contact">
-      <div className="container">
+      <div className="aboutcontainer">
           <img 
             className="mssgsvg"
             src="./message-bro.svg"

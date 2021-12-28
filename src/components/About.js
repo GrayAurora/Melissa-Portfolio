@@ -9,14 +9,14 @@ library.add(faCode)
 export default function About() {
   return (
     <section id="about" className="aboutBox">
-      <div className="container">
+      <div className="aboutcontainer">
         <div className="intro">
           <FontAwesomeIcon icon={faCode}/>
           <h1>  Hi, I'm Melissa</h1>
           <p>I am a Front-End Developer for Web and Mobile Applications.</p>
           <div className="btnGrp">
-            <Button href="#contact"> Let's talk </Button>
-            <Button href="#projects"> My projects </Button>
+            <Button href="#contact">Let's talk</Button>
+            <Button href="#projects">My projects</Button>
           </div>
         </div>
           <img 
