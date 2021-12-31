@@ -11,7 +11,7 @@
 }
 
 .navbar {
-  background-color: #2E3338;
+  background-color: rgb(46, 51, 56);
 }
 
 .navbar .container {
@@ -208,7 +208,7 @@ a {
 
 .form-label {
   font-size: large;
-  color: #D5B038;
+  color: rgb(213, 176, 56);
 }
 
 .formMssg {
@@ -221,6 +221,7 @@ a {
 
 .formGroup > .form-text {
   opacity: 1;
+  
 }
 
 .footerContainer {
