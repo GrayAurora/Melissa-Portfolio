@@ -15,8 +15,8 @@ export default function About() {
           <h1>  Hi, I'm Melissa</h1>
           <p>I am a Front-End Developer for Web and Mobile Applications.</p>
           <div className="btnGrp">
-            <Button href="#contact">Let's talk</Button>
-            <Button href="#projects">My projects</Button>
+            <Button inline-flex href="#contact">Contact Me!</Button>
+            <Button inline-flex href="#projects">My Projects</Button>
           </div>
         </div>
           <img 

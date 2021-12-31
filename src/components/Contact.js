@@ -1,16 +1,15 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
 
 export default function Contact() {
   return (
     <section id="contact">
-      <div className="aboutcontainer">
+      <div className="aboutcontainer formCont">
           <img 
             className="mssgsvg"
             src="./message-bro.svg"
             alt="react logo" />
-        <div className="intro">
+        <div className="intro formElem">
           <Form>
             <Row>
               <Col>
@@ -26,7 +25,7 @@ export default function Contact() {
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="email"> Email Address:</FormLabel><br />
-              <FormControl id='email' type="email" placeholder="Enter E-mail"/><br />
+              <FormControl id='email' type="email" placeholder="Enter E-mail"/>
               <FormText>Snitches get stitches. Your email is safe with me.</FormText>
             </FormGroup>
 
@@ -38,7 +37,7 @@ export default function Contact() {
 
             <Row>
               <Col>
-                <Button type='submit' className='primary'>Send Inquiry</Button>
+                <Button type='submit' className="submitBtn">Send Inquiry</Button>
               </Col>
             </Row>
           </Form>

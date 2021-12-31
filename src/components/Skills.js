@@ -9,9 +9,9 @@ export default function Skills() {
           <h1>Technologies</h1>
           <Row className="techIcons">
               {skills.map((skill) => ( 
-              <Col className="col-xs-4 col-md">
+              <Col>
                 <img  className="singleIcons" src={skill.image} alt={skill.alternate} /> 
-                <h3>{skill.title}</h3>
+                <h4>{skill.title}</h4>
               </Col>
               ))}
           </Row>
