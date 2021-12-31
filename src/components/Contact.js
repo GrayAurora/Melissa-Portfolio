@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
 
+
 export default function Contact() {
+
   return (
     <section id="contact">
       <div className="aboutcontainer formCont">
@@ -19,25 +21,25 @@ export default function Contact() {
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="name"> Full Name:</FormLabel><br />
-              <FormControl id='name'type="text" placeholder="First and Last Name"/>
+              <FormControl id='name'type="text" name='user_name' placeholder="First and Last Name"/>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="email"> Email Address:</FormLabel><br />
-              <FormControl id='email' type="email" placeholder="Enter E-mail"/>
+              <FormControl id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
               <FormText>Snitches get stitches. Your email is safe with me.</FormText>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="mssg"> Message:</FormLabel><br />
-              <FormControl id='mssg' as='textarea' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
+              <FormControl id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
             </FormGroup>
 
             <Row>
               <Col>
-                <Button type='submit' className="submitBtn">Send Inquiry</Button>
+                <Button type='submit' className="submitBtn" value='Send'>Send Inquiry</Button>
               </Col>
             </Row>
           </Form>
