@@ -1,10 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { Button } from "react-bootstrap";
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faCode)
+
 
 export default function About() {
   return (
