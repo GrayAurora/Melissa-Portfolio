@@ -6,24 +6,21 @@ import{ init } from '@emailjs/browser';
 
 export default function Contact() {
 
-  const btn = document.getElementById('button');
-  document.getElementById('form')
-   .addEventListener('submit', function(event) {
-    init("user_TanZWr3COe2uwcj8cnb9k");
-     event.preventDefault();
-     
-     const serviceID = 'default_service';
+  onSubmit = () => {
+    const serviceID = 'portfolio_form';
      const templateID = 'template_q473ydx';
+     const form = document.querySelector('#form');
+     init("user_TanZWr3COe2uwcj8cnb9k");     
+
   
-     emailjs.sendForm(serviceID, templateID, this)
+     emailjs.sendForm(serviceID, templateID, '#form')
       .then(() => {
-        btn.value = 'Send';
         alert('Sent!');
+        form.reset();
       }, (err) => {
-        btn.value = 'Send';
-        alert(JSON.stringify(err));
+        alert('Message Failed to Send' + JSON.stringify(err));
       });
-  });
+  }
 
   return (
     <section id="contact">
@@ -33,7 +30,7 @@ export default function Contact() {
             src="./message-bro.svg"
             alt="react logo" />
         <div className="intro formElem">
-          <Form id='form'>
+          <Form id='form' onSubmit={handleSubmit(onSubmit)}>
             <Row>
               <Col>
                 <h2>Send me a Message!</h2>
@@ -42,20 +39,20 @@ export default function Contact() {
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="name"> Full Name:</FormLabel><br />
-              <FormControl id='name'type="text" name='user_name' placeholder="First and Last Name"/>
+              <FormControl ref={register} id='name'type="text" name='user_name' placeholder="First and Last Name"/>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="email"> Email Address:</FormLabel><br />
-              <FormControl id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
+              <FormControl ref={register} id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
               <FormText>Snitches get stitches. Your email is safe with me.</FormText>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="mssg"> Message:</FormLabel><br />
-              <FormControl id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
+              <FormControl ref={register} id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
             </FormGroup>
 
             <Row>
