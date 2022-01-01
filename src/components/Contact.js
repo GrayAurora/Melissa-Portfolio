@@ -1,40 +1,31 @@
 import React from 'react';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
-import{ init, sendForm } from '@emailjs/browser';
+import{ init, sendForm, emailjs } from '@emailjs/browser';
 
 
 
 export default function Contact() {
 
-  const [toSend, setToSend] = useState({
-    user_name: '',
-    user_email: '',
-    message: '',
-
-  });
-
-  const onSubmit = (e) => {
-    init("user_TanZWr3COe2uwcj8cnb9k");     
+  const handleOnSubmit = (e) => {
     const serviceID = 'portfolio_form';
     const templateID = 'template_q473ydx';
-    
+    const userID = "user_TanZWr3COe2uwcj8cnb9k";
+
     e.preventDefault();
     emailjs.sendForm(
       serviceID,
       templateID,
-      toSend,
+      e.target,
+      userID
     )
-      .then(() => {
-        alert('SENT!');
-      })
-      .catch((err) => {
-        alert('FAILED...', err);
-      });
-  };
+    .then(() => {
+      alert('SENT!');
+    })
+    .catch((err) => {
+      alert('FAILED...', err);
+    });
+  }
   
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
-  };
 
   return (
     <section id="contact">
@@ -44,7 +35,7 @@ export default function Contact() {
             src="./message-bro.svg"
             alt="react logo" />
         <div className="intro formElem">
-          <Form id='form' onSubmit={onSubmit}>
+          <Form id='form' onSubmit={handleOnSubmit}>
             <Row>
               <Col>
                 <h2>Send me a Message!</h2>
@@ -53,20 +44,20 @@ export default function Contact() {
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="name"> Full Name:</FormLabel><br />
-              <FormControl onChange={handleChange} value={toSend.user_name} id='name'type="text" name='user_name' placeholder="First and Last Name"/>
+              <FormControl required  id='name'type="text" name='user_name' placeholder="First and Last Name"/>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="email"> Email Address:</FormLabel><br />
-              <FormControl onChange={handleChange} value={toSend.user_email} id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
+              <FormControl required   id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
               <FormText>Snitches get stitches. Your email is safe with me.</FormText>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="mssg"> Message:</FormLabel><br />
-              <FormControl onChange={handleChange} value={toSend.message} id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
+              <FormControl required  id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
             </FormGroup>
 
             <Row>
