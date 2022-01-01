@@ -19,16 +19,16 @@ export default function Contact() {
     const templateID = 'template_q473ydx';
     
     e.preventDefault();
-    sendForm(
+    emailjs.sendForm(
       serviceID,
       templateID,
       toSend,
     )
       .then(() => {
-        console.log('SENT!');
+        alert('SENT!');
       })
       .catch((err) => {
-        console.log('FAILED...', err);
+        alert('FAILED...', err);
       });
   };
   
