@@ -2,17 +2,16 @@ import React from 'react';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
 import{ init } from '@emailjs/browser';
 
-init("user_TanZWr3COe2uwcj8cnb9k");
+
 
 export default function Contact() {
 
   const btn = document.getElementById('button');
-
   document.getElementById('form')
    .addEventListener('submit', function(event) {
+    init("user_TanZWr3COe2uwcj8cnb9k");
      event.preventDefault();
-  
-  
+     
      const serviceID = 'default_service';
      const templateID = 'template_q473ydx';
   
