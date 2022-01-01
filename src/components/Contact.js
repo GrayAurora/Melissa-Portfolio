@@ -14,7 +14,7 @@ export default function Contact() {
 
   });
 
-  onSubmit = (e) => {
+  const onSubmit = (e) => {
 
     const serviceID = 'portfolio_form';
     const templateID = 'template_q473ydx';
@@ -24,7 +24,6 @@ export default function Contact() {
       serviceID,
       templateID,
       toSend,
-      "user_TanZWr3COe2uwcj8cnb9k"
     )
       .then(() => {
         console.log('SENT!');
@@ -43,7 +42,7 @@ export default function Contact() {
             src="./message-bro.svg"
             alt="react logo" />
         <div className="intro formElem">
-          <Form id='form' onSubmit={onSubmit()}>
+          <Form id='form' onSubmit={onSubmit}>
             <Row>
               <Col>
                 <h2>Send me a Message!</h2>
