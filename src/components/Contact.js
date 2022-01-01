@@ -5,7 +5,6 @@ import{ init, sendForm } from '@emailjs/browser';
 
 
 export default function Contact() {
-  init("user_TanZWr3COe2uwcj8cnb9k");     
 
   const toSend = useState({
     user_name: '',
@@ -15,7 +14,7 @@ export default function Contact() {
   });
 
   const onSubmit = (e) => {
-
+    init("user_TanZWr3COe2uwcj8cnb9k");     
     const serviceID = 'portfolio_form';
     const templateID = 'template_q473ydx';
     
