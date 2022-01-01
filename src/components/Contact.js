@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
 
 const initialFormData = Object.freeze({
-  usser_name: "",
+  user_name: "",
   user_email: "",
   message: "",
 });
