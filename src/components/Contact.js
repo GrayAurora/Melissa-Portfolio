@@ -6,7 +6,7 @@ import{ init, sendForm } from '@emailjs/browser';
 
 export default function Contact() {
 
-  const toSend = useState({
+  const [toSend, setToSend] = useState({
     user_name: '',
     user_email: '',
     message: '',
@@ -32,6 +32,9 @@ export default function Contact() {
       });
   };
   
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
   return (
     <section id="contact">
@@ -50,20 +53,20 @@ export default function Contact() {
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="name"> Full Name:</FormLabel><br />
-              <FormControl value={toSend.user_name} id='name'type="text" name='user_name' placeholder="First and Last Name"/>
+              <FormControl onChange={handleChange} value={toSend.user_name} id='name'type="text" name='user_name' placeholder="First and Last Name"/>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="email"> Email Address:</FormLabel><br />
-              <FormControl value={toSend.user_email} id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
+              <FormControl onChange={handleChange} value={toSend.user_email} id='email' type="email" name='user_email' placeholder="Enter E-mail"/>
               <FormText>Snitches get stitches. Your email is safe with me.</FormText>
             </FormGroup>
 
 
             <FormGroup className="formGroup">
               <FormLabel htmlFor="mssg"> Message:</FormLabel><br />
-              <FormControl value={toSend.message} id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
+              <FormControl onChange={handleChange} value={toSend.message} id='mssg' as='textarea' name='message' rows={5} className='formMssg'placeholder="Enter inquiry details. Be as short or specific as you would like."/>
             </FormGroup>
 
             <Row>
