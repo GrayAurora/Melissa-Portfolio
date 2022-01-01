@@ -1,8 +1,30 @@
 import React from 'react';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
+import{ init } from '@emailjs/browser';
 
+init("user_TanZWr3COe2uwcj8cnb9k");
 
 export default function Contact() {
+
+  const btn = document.getElementById('button');
+
+  document.getElementById('form')
+   .addEventListener('submit', function(event) {
+     event.preventDefault();
+  
+  
+     const serviceID = 'default_service';
+     const templateID = 'template_q473ydx';
+  
+     emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send';
+        alert('Sent!');
+      }, (err) => {
+        btn.value = 'Send';
+        alert(JSON.stringify(err));
+      });
+  });
 
   return (
     <section id="contact">
@@ -12,7 +34,7 @@ export default function Contact() {
             src="./message-bro.svg"
             alt="react logo" />
         <div className="intro formElem">
-          <Form>
+          <Form id='form'>
             <Row>
               <Col>
                 <h2>Send me a Message!</h2>
@@ -39,7 +61,7 @@ export default function Contact() {
 
             <Row>
               <Col>
-                <Button type='submit' className="submitBtn" value='Send'>Send Inquiry</Button>
+                <Button type='submit' id='button' className="submitBtn" value='Send'>Send Inquiry</Button>
               </Col>
             </Row>
           </Form>
