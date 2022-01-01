@@ -7,7 +7,7 @@ import{ init, sendForm } from '@emailjs/browser';
 export default function Contact() {
   init("user_TanZWr3COe2uwcj8cnb9k");     
 
-  const [toSend] = useState({
+  const toSend = useState({
     user_name: '',
     user_email: '',
     message: '',
@@ -43,7 +43,7 @@ export default function Contact() {
             src="./message-bro.svg"
             alt="react logo" />
         <div className="intro formElem">
-          <Form id='form' onSubmit={handleSubmit(onSubmit)}>
+          <Form id='form' onSubmit={onSubmit()}>
             <Row>
               <Col>
                 <h2>Send me a Message!</h2>
