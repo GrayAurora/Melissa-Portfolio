@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, FormControl, FormGroup, FormLabel, FormText, Button, Row, Col } from "react-bootstrap";
-import{ init, send } from '@emailjs/browser';
+import{ init, sendForm } from '@emailjs/browser';
 
 
 
@@ -20,7 +20,7 @@ export default function Contact() {
     const templateID = 'template_q473ydx';
     
     e.preventDefault();
-    send(
+    sendForm(
       serviceID,
       templateID,
       toSend,
@@ -28,7 +28,6 @@ export default function Contact() {
     )
       .then(() => {
         console.log('SENT!');
-        form.reset();
       })
       .catch((err) => {
         console.log('FAILED...', err);
