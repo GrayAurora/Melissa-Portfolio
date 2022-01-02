@@ -17,7 +17,10 @@ export const Contact = (props) => {
     ).then(res => {
         console.log('Email successfully sent!')
     })
-        .catch(err => console.error('There has been an Error.', err))
+        .catch(err => {
+          console.error('There has been an Error.', err);
+          alert("Message failed to send. Please try again or email directly at: melissarodriguez.dev@gmail.com")
+        })
   }
 
   const handleChange = (e) => {
@@ -38,7 +41,6 @@ export const Contact = (props) => {
 
     console.log(formData);
     };
-
 
   return (
     <section id="contact">
