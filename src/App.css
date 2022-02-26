@@ -227,8 +227,15 @@ a {
 .footerContainer {
   margin-bottom: 0;
   height: 5rem;
-  margin-top: auto;
+  margin-top: 2rem;
   text-align: center;
+}
+
+.footerIcons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
