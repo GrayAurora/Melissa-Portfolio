@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faEnvelope, faFile )
