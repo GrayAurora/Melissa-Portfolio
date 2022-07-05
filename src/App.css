@@ -87,15 +87,13 @@
   color: #CD9900;
 }
 
-
-
 .btnGrp {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 90%;
-  align-self: flex-start;
-  justify-content: space-around;
+  align-self: center;
+  justify-content: center;
 }
 
 .btn {
@@ -193,7 +191,9 @@ h1 {
 }
 
 .intro > p {
-  font-size: 1.30rem;
+  font-size: 1.15rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .projectIcon > h5 {
@@ -287,12 +287,12 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-self: flex-start;
-    justify-content: space-between;
-    width: 70%;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
   }
   .btn {
-    width: 45%;
+    width: 40%;
   }
   .aboutcontainer {
     max-height: max-content;
@@ -321,7 +321,6 @@ a {
   }
   .intro {
     width: 90%;
-    text-align: center;
   }
   .btnGrp {
     width: 100%;
@@ -392,7 +391,6 @@ a {
   }
   .intro {
     width: 90%;
-    text-align: center;
   }
   .btnGrp {
     width: 100%;
